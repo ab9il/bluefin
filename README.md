@@ -25,6 +25,10 @@ Bluefin's mission is to provide a robust, cloud-native desktop operating system 
 - **Developer Experience**: Integrated cloud-native tooling and workflows, including Kubernetes and container support
 - **Sustainability**: Reduced maintenance overhead for contributors by using the latest cloud native infrastructure tech
 
+## Customizations
+
+This version of Bluefin is customized with extra fonts and encrypted networking (Tor, I2P, Sshuttle, Proxychains) installed to the base image.
+
 ## Releases
 
 <a href="https://docs.projectbluefin.io/changelogs">
@@ -47,6 +51,23 @@ Bluefin's mission is to provide a robust, cloud-native desktop operating system 
 ## Getting Started
 
 Visit [projectbluefin.io](https://projectbluefin.io/#scene-picker) to explore installation options and get started with Bluefin.
+
+## Installing This Customized Version of Bluefin
+
+You must first install the official release of Bluefin (or any other flavor of Fedora Atomic or Universal Blue Linux) and then rebase to this image. You will thereby get the necessary verification keys and trust policies. The second rebase task fully installs and verifies authenticity of this customized Bluefin version:
+
+First rebase:
+
+```bash
+rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/ab9il/bluefin:latest
+```
+Reboot and then rebase to the signed image:
+
+```bash
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ab9il/bluefin:latest
+```
+
+Reboot again and your switch to this customized version of Bluefin will be complete.
 
 ### Secure Boot
 
