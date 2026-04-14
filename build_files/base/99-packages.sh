@@ -27,7 +27,6 @@ FEDORA_PACKAGES=(
     overpass-fonts
     overpass-mono-fonts
     pandoc
-    pandoc-crossref
     parallel
     polarsys-b612-fonts
     poppler
