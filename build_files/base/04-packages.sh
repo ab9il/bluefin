@@ -36,6 +36,7 @@ FEDORA_PACKAGES=(
     foo2zjs
     fuse-encfs
     gcc
+    gcc-c++
     git-credential-libsecret
     glow
     gnome-tweaks
@@ -49,6 +50,8 @@ FEDORA_PACKAGES=(
     jetbrains-mono-fonts-all
     just
     krb5-workstation
+    libappindicator-gtk3
+    libayatana-appindicator-gtk3
     libgda
     libgda-sqlite
     libimobiledevice
@@ -134,6 +137,7 @@ copr_install_isolated "ublue-os/packages" "uupd"
 
 # Packages to exclude - common to all versions
 EXCLUDED_PACKAGES=(
+    cosign
     fedora-bookmarks
     fedora-chromium-config
     fedora-chromium-config-gnome
@@ -141,21 +145,12 @@ EXCLUDED_PACKAGES=(
     firefox-langpacks
     gnome-extensions-app
     gnome-shell-extension-background-logo
+    gnome-software
     gnome-software-rpm-ostree
     gnome-terminal-nautilus
     podman-docker
     yelp
 )
-
-# Version-specific package exclusions
-case "$FEDORA_MAJOR_VERSION" in
-    42)
-        EXCLUDED_PACKAGES+=(gnome-software cosign)
-        ;;
-    43)
-        EXCLUDED_PACKAGES+=(gnome-software cosign)
-        ;;
-esac
 
 # Remove excluded packages if they are installed
 if [[ "${#EXCLUDED_PACKAGES[@]}" -gt 0 ]]; then
@@ -173,16 +168,6 @@ dnf -y copr disable ublue-os/staging
 dnf -y swap \
     --repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
     fwupd fwupd
-
-# TODO: remove me on next flatpak release when preinstall landed in Fedora
-if [[ "$(rpm -E %fedora)" -ge "42" ]]; then
-  dnf -y copr enable ublue-os/flatpak-test
-  dnf -y copr disable ublue-os/flatpak-test
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak flatpak
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak-libs flatpak-libs
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak-session-helper flatpak-session-helper
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test install flatpak-debuginfo flatpak-libs-debuginfo flatpak-session-helper-debuginfo
-fi
 
 ## Pins and Overrides
 ## Use this section to pin packages in order to avoid regressions
