@@ -19,6 +19,7 @@ source /ctx/build_files/shared/copr-helpers.sh
 FEDORA_PACKAGES=(
     aria2
     asciidoc
+    dnscrypt-proxy
     fd-find
     glow
     mathjax-typewriter-fonts
