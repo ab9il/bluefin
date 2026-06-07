@@ -46,7 +46,7 @@ echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
 dnf -y install "${FEDORA_PACKAGES[@]}"
 
 # From robot/veracrypt
-copr_install_isolated "architektapx/veracrypt" "veracrypt"
+copr_install_isolated "bigjapka/VeraCrypt" "veracrypt"
 
 # From lukasfr/ripgrep-all
 copr_install_isolated "lukasfr/ripgrep-all" "ripgrep-all"
