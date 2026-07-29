@@ -38,6 +38,17 @@ FEDORA_PACKAGES=(
     tor
     urw-base35-fonts
     xorriso
+    hackrf
+    hackrf-devel
+    libuhd-devel
+    rtl-sdr
+    rtl-sdr-devel
+    SoapySDR
+    SoapySDR-devel
+    soapysdr-module-hackrf
+    soapy-rtlsdr
+    soapysdr-tools
+    uhd-host
 )
 
 
