@@ -27,7 +27,7 @@ Bluefin's mission is to provide a robust, cloud-native desktop operating system 
 
 ## Customizations
 
-This version of Bluefin is customized with extra fonts and encrypted networking (Tor, I2P, Sshuttle, Proxychains) installed to the base image.
+This version of Bluefin is customized with extra fonts, encrypted networking, and software defined radio drivers installed to the base image.
 
 ## Releases
 
