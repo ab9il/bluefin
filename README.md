@@ -56,18 +56,20 @@ Visit [projectbluefin.io](https://projectbluefin.io/#scene-picker) to explore in
 
 You must first install the official release of Bluefin (or any other flavor of Fedora Atomic or Universal Blue Linux) and then rebase to this image. You will thereby get the necessary verification keys and trust policies. The second rebase task fully installs and verifies authenticity of this customized Bluefin version:
 
-First rebase:
+Rebase with the "bootc switch" command for the latest images:
 
 ```bash
-rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/ab9il/bluefin:latest
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/ab9il/bluefin:latest
 ```
-Reboot and then rebase to the signed image:
+
+
+If you want the "stable" images instead, then use the "stable" tag:
 
 ```bash
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ab9il/bluefin:latest
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/ab9il/bluefin:stable
 ```
 
-Reboot again and your switch to this customized version of Bluefin will be complete.
+Reboot and your switch to this customized version of Bluefin will be complete.
 
 ### Secure Boot
 
