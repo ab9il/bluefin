@@ -40,17 +40,15 @@ FEDORA_PACKAGES=(
     xorriso
     hackrf
     hackrf-devel
-    libuhd-devel
     rtl-sdr
     rtl-sdr-devel
     SoapySDR
     SoapySDR-devel
-    soapysdr-module-hackrf
     soapy-rtlsdr
-    soapysdr-tools
-    uhd-host
+    soapy-uhd
+    uhd
+    uhd-devel
 )
-
 
 # Install all Fedora packages (bulk - safe from COPR injection)
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
