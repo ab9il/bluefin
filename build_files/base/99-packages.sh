@@ -46,9 +46,9 @@ FEDORA_PACKAGES=(
     SoapySDR-devel
     soapy-rtlsdr
     soapy-uhd
-    texlive-fonts-recommended
-    texlive-latex-recommended
-    texlive-xetex
+    texlive-collection-fontsrecommended
+    texlive-collection-xetex
+    texlive-latex
     uhd
     uhd-devel
 )
