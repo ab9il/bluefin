@@ -101,9 +101,9 @@ hi! EndOfBuffer guibg=NONE ctermbg=NONE
 hi! Search ctermbg=DarkGrey ctermfg=Black cterm=bold guifg=#CCCCDD guibg=#455AAA
 hi! CurSearch ctermbg=DarkGrey ctermfg=Black cterm=bold guifg=#CCCCDD guibg=#00AAAA
 hi! Visual ctermbg=DarkGrey ctermfg=NONE cterm=bold guifg=NONE guibg=#455AAA
-hi! ColorColumn cterm=bold ctermbg=Yellow guibg=#303030
-hi! CursorLine cterm=bold ctermbg=Yellow guibg=#303030
-hi! CursorColumn cterm=bold ctermbg=Yellow guibg=#303030
+hi! ColorColumn cterm=bold ctermbg=Yellow guibg=#404040
+hi! CursorLine cterm=bold ctermbg=Yellow guibg=#404040
+hi! CursorColumn cterm=bold ctermbg=Yellow guibg=#404040
 hi HighlightedyankRegion ctermfg=Black ctermbg=Yellow cterm=bold guifg=#000000 guibg=#9CE342
 hi SpellBad cterm=underline ctermfg=9 gui=underline guifg=#CC3030
 hi SpellLocal cterm=underline ctermfg=9 gui=underline guifg=#CC3030

@@ -59,7 +59,7 @@ Visit [projectbluefin.io](https://projectbluefin.io/#scene-picker) to explore in
 
 ## Installing This Customized Version of Bluefin
 
-You must first install the official release of Bluefin (or any other flavor of Fedora Atomic or Universal Blue Linux) and then rebase to this image. You will thereby get the necessary verification keys and trust policies. The second rebase task fully installs and verifies authenticity of this customized Bluefin version:
+You must first install the official release of Bluefin (or any other flavor of Fedora Atomic or Universal Blue Linux, then rebase to this image. You will thereby get the necessary verification keys and trust policies. The second rebase task fully installs and verifies authenticity of this customized Bluefin version:
 
 Rebase with the "bootc switch" command for the latest images:
 
